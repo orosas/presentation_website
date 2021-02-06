@@ -1,0 +1,141 @@
+:root {
+  --page-1-color: #b67171;
+  --page-2-color: #7e7474;
+  --page-3-color: #39311d;
+  --page-4-color: #c19065;
+  --animate-speed: 2s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Page Colors */
+#page-1 {
+  background: var(--page-1-color);
+}
+
+#page-2 {
+  background: var(--page-2-color);
+}
+
+#page-3 {
+  background: var(--page-3-color);
+}
+
+#page-4 {
+  background: var(--page-4-color);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.page p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+
+  transition: all .5s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  background: #f39660;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-dark:hover {
+  background: #f4f4f4;
+  color: #333;
+}
+
+
+/* Animación de h1 en page-1 */
+#page-1 h1 {
+  /* Nota: Transform envía el h1 1200px hacia arriba. 
+  Sl ejecutar animation se llamará al @keyframe para colocar en 
+  su posición final. */
+  transform: translateY(-1200px);
+  animation: h1-vertical var(--animate-speed) ease-in-out forwards;
+}
+
+/* Animación de p en page-1 */
+#page-1 p {
+  transform: translateX(-2800px);
+  animation: p-horizontal var(--animate-speed) ease-in-out 1s forwards;
+}
+
+/* Animación de btn en page-1 */
+#page-1 .btn {
+  transform: scale(.2);
+  animation: boton-crece var(--animate-speed) ease-in-out 0.5s forwards;
+}
+
+
+
+/* Keyframes */
+
+/* Animación de h1 en page-1 */
+@keyframes h1-vertical {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Animación de p en page-1 */
+@keyframes p-horizontal {
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animación de btn en page-1 */
+@keyframes boton-crece {
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+
+
+/* transform translatex 0% -300px translatey animation */
